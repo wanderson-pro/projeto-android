@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+}
+
+/*DECLARAÇÃO DE VARIÁVEIS*/
+
+:root {
+    --cor0: #ffffff;
+    --cor1: #D6D58E;
+    --cor2: #DBF227;
+    --cor3: #005C53;
+    --cor4: #d6d58f80;
+    --cor5: #9ec030;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Sofia Sans Condensed', sans-serif;
+    --fonte-android: 'Android', cursive; 
+}
+
+/*SELETOR UNIVERSAL (seleciona todos os elementos) essa configuração vai remover todos os preenchimentos e margens de todos os elementos.
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*CORPO*/
+
+body {
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrao);
+}
+
+/*LINKS EXTERNOS*/
+
+.externo::after {
+    content: '\00A0\01F517';
+}
+
+/*CABEÇALHO*/
+
+header {
+    background-image: linear-gradient(to top, var(--cor3), var(--cor2));
+    text-align: center;
+    min-height: 150px;
+    padding: 40px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+header > h1 {
+    color: var(--cor0);
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.295);
+}
+
+header > p {
+    color: var(--cor0);
+    font-size: 1.2em;
+    font-weight: normal;
+    max-width: 600px;
+    padding: 0 10px 50px 10px;
+    margin: auto;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.295);
+}
+
+/*MENU*/
+
+#menu {
+    position: relative;
+    top: 30.5px;
+    margin-left: 10px;
+}
+
+#menu > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.items {
+    margin: 10px 5px 0 0;
+}
+
+.items > a {
+    color: var(--cor0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .96em;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+
+.items a:hover {
+    background-color: var(--cor2);
+    color: var(--cor3);
+}
+
+/*CONTEÚDO PRINCIPAL*/
+
+#principal {
+    min-width: 270px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--cor0);
+    padding: 0 15px 25px 15px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*TÍTULOS E PARÁGRAFOS*/
+
+#artigo h1 {
+    color: var(--cor3);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+    padding-top: 20px;
+}
+
+#artigo h2 {
+    color: var(--cor3);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.3em;
+    text-indent: 8px;
+    padding: 5px 0;
+    background: linear-gradient(to right, var(--cor1), transparent);
+}
+
+#artigo p {
+    text-indent: 35px;
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 15px 0;
+}
+
+#artigo strong {
+    color: var(--cor3);
+}
+
+#artigo a {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 5px;
+}
+
+#artigo a:hover {
+    text-decoration: underline;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+}
+
+.imagens {
+    width: 100%;
+}
+
+.video {
+    padding: 29.15%;
+    margin: 0 -15px;
+    background-color: var(--cor3);
+    position: relative;
+}
+
+.video > iframe {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/*ASIDE*/
+
+#apoio {
+    background-color: var(--cor4);
+    padding: 2px 10px;
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.253);
+}
+
+#apoio > h3 {
+    background-color: var(--cor5);
+    font-size: 1.1em;
+    color: var(--cor0);
+    margin: -2.5px -10.3px ;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+#apoio > p {
+    text-indent: 35px;
+    text-align: justify;
+}
+
+.lista-droid {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+.lista-droid abbr {
+    text-decoration: underline;
+}
+
+/*ROTAPÉ*/
+
+#rotape {
+    text-align: center;
+    font-size: .8em;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: var(--cor3);
+    color: var(--cor0);
+}
